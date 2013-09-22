@@ -1,3 +1,6 @@
+/// ***SOLVED*** ///
+
+
 // The sum of the squares of the first ten natural numbers is,
 // 12 + 22 + ... + 102 = 385
 
@@ -25,8 +28,9 @@ function arrayOfNatNum(max){
 	}
 	return result;
 }
-var result = arrayOfNatNum(10);
+var result = arrayOfNatNum(100);
 var sum = square(result.reduce(add));
 var square = result.map(square);
 var addSquared = square.reduce(add);
-console.log(sum);
+var answer = sum - addSquared;
+console.log(answer);
