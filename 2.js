@@ -1,5 +1,6 @@
 /// ***SOLVED*** \\\
 
+
 var result = [];
 function fibonacciArray(array, limit){
 	if(array.length === 0){
