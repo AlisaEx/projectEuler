@@ -24,5 +24,5 @@ function divisibilityCheck(number, checkTo){
 	}
 	return true;
 };
-findSmallestNumber(21,20);
+findSmallestNumber(11,10);
 // console.log(divisibilityCheck(2520, 10));
