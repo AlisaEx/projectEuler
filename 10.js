@@ -4,7 +4,7 @@
 
 function findPrimeSum(maxPrime){
 	var current = 0;
-	for(i=2; i<maxPrime; i++){
+	for(i=2; i<maxPrime;i++){
 		if(isPrime(i)){
 			current += i;
 		}
@@ -22,4 +22,20 @@ function isPrime(number){
 	return true;
 }
 
-findPrimeSum(10);
+
+
+function findHigherPrimeSum(){
+	var current = 0;
+	for(i=200000; i<2000000;i++){
+		if(isPrime(i)){
+			current += i;
+		}
+	}
+	console.log(current);
+	return current;
+}
+
+
+// var first = findPrimeSum(200000);
+var second = findHigherPrimeSum();
+console.log(second);
