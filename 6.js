@@ -28,6 +28,8 @@ function arrayOfNatNum(max){
 	}
 	return result;
 }
+
+
 var result = arrayOfNatNum(100);
 var sum = square(result.reduce(add));
 var square = result.map(square);
