@@ -1,3 +1,6 @@
+/// ***SOLVED*** ///
+
+
 // The following iterative sequence is defined for the set of positive integers:
 
 // n → n/2 (n is even)
@@ -12,34 +15,32 @@
 
 // NOTE: Once the chain starts the terms are allowed to go above one million.
 
-function makeChain(number){
-	var chain = [];
-	var current = number;
-	while (current != 1){
-		chain.push(current);
-		current = (current%2===0) ? (current/2):((3*current)+1);
+function findlongest(){
+	var longest = [];
+	for(var i=0; i<1000000; i++){
+		var chain = makeChain(i);
+		if(chain.length>longest.length){
+			longest = chain;
+		}
 	}
-	console.log(chain);
-	return current;
+	console.log(longest[0]);
+	return longest[0];
 }
 
 
 
-// function iterativeSequence(number){
-// 	console.log(chain);
-// 	var chain = [];
-// 	if(number===1){ return chain; }
-// 	else{
-// 		if(number%2===0){
-// 			console.log("even");
-// 			chain.push(iterativeSequence(number/2));
-// 		}
-// 		else{
-// 			console.log("odd");
-// 			chain.push(iterativeSequence((3*number)+1));
-// 		}
-// 	}
-// }
 
-// console.log(iterativeSequence(13));
-console.log(makeChain(13));
+function makeChain(number){
+	if(number<1){return [number]}
+	var chain = [];
+		do{
+			chain.push(number);
+			number = (number%2===0) ? (number/2):((3*number)+1);
+		}
+		while (number != 1);
+	chain.push(1);
+	return chain;
+}
+
+
+console.log(findlongest());
